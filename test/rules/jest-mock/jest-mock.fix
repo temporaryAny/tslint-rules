@@ -1,0 +1,10 @@
+jest.mock("");
+jest.mock('');
+
+jest.mock<typeof import("")>("", () => void 0);
+jest.mock<typeof import('')>('', () => void 0);
+
+jest.mock<T>("");
+
+jest.mock<import typeof("../foo")>("../foo", () => {});
+
