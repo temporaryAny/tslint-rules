@@ -1,0 +1,12 @@
+jest.mock("");
+jest.mock('');
+
+jest.mock("", () => void 0);
+         ~nil  [jest.mock requires a type argument]
+jest.mock('', () => void 0);
+         ~nil  [jest.mock requires a type argument]
+
+jest.mock<T>("");
+
+jest.mock<import typeof("../foo")>("../foo", () => {});
+
